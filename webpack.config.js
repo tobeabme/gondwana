@@ -46,6 +46,10 @@ module.exports = {
       template: "./src/slice.html",
       filename: "slice.html", // 明确指定输出文件名
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/google49ac08e8256411d0.html",
+      filename: "google49ac08e8256411d0.html", // 明确指定输出文件名
+    }),
     new SitemapPlugin({
       base: "https://www.gangwana.com",
       paths,

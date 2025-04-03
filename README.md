@@ -14,7 +14,7 @@ npm run build
 npx gh-pages -d dist
 
 or 
-npm deploy
+npm run deploy
 
 ### Automated Deployment
 git push origin main
