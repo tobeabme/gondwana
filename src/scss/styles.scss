@@ -1,0 +1,236 @@
+// Import all of Bootstrap's CSS
+// Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+@use "bootstrap/scss/bootstrap";
+
+//
+// Custom styles
+//
+
+@use "icon-list";
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #EDD1A1;
+  color: #2d3748;
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+
+
+//slide
+.carousel-inner .carousel-item {
+  height: 500px; /* 固定幻灯片高度，可根据需要调整 */
+  transition: opacity 0.5s ease-in-out; /* 平滑过渡效果 */
+}
+.carousel-inner .carousel-item .carousel-img { /* 使用独立类名隔离样式 */
+  opacity: 0.6;
+}
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.4); /* 半透明背景提升文字可读性 */
+  padding: 1rem;
+  border-radius: 10px;
+  color: #fff;
+}
+.carousel-caption h5 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.carousel-caption p {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.slide-1 {
+  background: linear-gradient(
+    135deg,
+    #8a9a5b,
+    #d4a373
+  ); /* 橄榄绿到麦黄 */
+}
+.slide-2 {
+  background: linear-gradient(135deg, #6b705c, #a68a64); /* 深绿到浅棕 */
+}
+.slide-3 {
+  background: linear-gradient(
+    135deg,
+    #a68a64,
+    #e0c097
+  ); /* 泥土棕到淡金 */
+}
+.slide-4 {
+  background: linear-gradient(
+    135deg,
+    #4c78ff, #34c759
+  ); 
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5)); /* 导航箭头阴影 */
+}
+.carousel-indicators [data-bs-target] {
+  background-color: #6b705c; /* 指示器颜色与生态主题一致 */
+}
+
+// brand name
+.color-dark-green {
+  color: #396129; /* Dark green for G, n, d, w, n */
+}
+.color-light-green {
+  color: #FE8403; /* Light green for o, a */
+}
+.navbar-brand {
+  font-family: 'Arial', sans-serif; /* Optional: customize font */
+  font-weight: 700; /* Bold for brand emphasis */
+  font-size: 2.5rem; /* Adjust size as needed */
+}
+
+// footer
+
+footer {
+  background: #396129; /* Dark green from your brand */
+  color: #fff;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.footer-text {
+  margin: 0;
+}
+.footer-text a {
+  color: #A1BE37; /* Light green for links */
+  text-decoration: none;
+  font-weight: 500;
+}
+.footer-text a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+// products page
+
+.page-products .sidebar {
+  height: 100vh; /* Full height sidebar */
+  background: rgba(255, 255, 255, 0.3); /* 50% transparent white */
+  border-right: 1px solid #dee2e6;
+  padding-top: 20px;
+}
+.page-products .nav-link {
+  color: #396129; /* Dark green from your brand */
+  font-weight: 500;
+}
+.page-products .nav-link:hover,
+.page-products .nav-link.active {
+  color: #a1be37; /* Light green from your brand */
+  background: #f1f3f5;
+}
+.page-products .product-card {
+  transition: transform 0.2s ease;
+}
+.page-products .product-card:hover {
+  transform: scale(1.05);
+}
+.page-products .product-img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.page-products .content-area {
+  padding: 30px;
+}
+
+// aboutus page
+.page-aboutus .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  // color: #4c78ff;
+  color:#412417;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+.page-aboutus .section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50%;
+  height: 3px;
+  background: #34c759;
+}
+.page-aboutus .content-card {
+  // background: white;
+  border-radius: 10px;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+.page-aboutus .content-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+.page-aboutus .icon {
+  color: #34c759;
+  margin-right: 10px;
+}
+.page-aboutus .highlight {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+// contact us
+
+.page-contactus .contact-info {
+  // background: #fff;
+  padding: 2rem;
+  // border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.page-contactus .contact-info h4 {
+  color: #396129;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.page-contactus .contact-info p, .page-contactus .contact-info a {
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+.page-contactus .contact-info a {
+  text-decoration: none;
+}
+.page-contactus .contact-info a:hover {
+  color: #A1BE37;
+}
+
+// brand page
+
+
+.page-brand {
+  padding: 3rem 0;
+}
+.page-brand .brand-section {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+.page-brand .brand-section h2 {
+  color: #396129;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.page-brand .highlight {
+  color: #a1be37;
+  font-weight: 500;
+}
+.page-brand .product-img {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.page-brand .product-img:hover {
+  transform: scale(1.05);
+}
