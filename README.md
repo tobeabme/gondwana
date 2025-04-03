@@ -1,2 +1,7 @@
-Banner 下载：
-https://www.shutterstock.com/search/mix-dry-fruits
+## Tools
+`mise` Multi-version management tool
+`npm` 
+
+## How to run
+npm run build
+npm start
