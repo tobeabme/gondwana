@@ -10,6 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Set Git Config
+        run: |
+          git config --global user.email "tobeabme@gmail.com"
+          git config --global user.name "tobeabme"
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -30,3 +35,4 @@ jobs:
           branch: gh-pages
           folder: dist
           clean: true
+          token: ${{ secrets.GITHUB_TOKEN }}
