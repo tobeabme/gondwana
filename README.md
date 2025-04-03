@@ -1,5 +1,7 @@
 ## Tools
+
 `mise` Multi-version management tool
+
 `npm` 
 
 ## How to run

@@ -4,6 +4,10 @@ const path = require("path");
 const autoprefixer = require("autoprefixer");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+//sitemap for seo
+const SitemapPlugin = require("sitemap-webpack-plugin").default;
+const paths = [{ path: "/", lastmod: new Date().toISOString() }];
+
 module.exports = {
   mode: "development",
   entry: "./src/js/main.js",
@@ -41,6 +45,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/slice.html",
       filename: "slice.html", // 明确指定输出文件名
+    }),
+    new SitemapPlugin({
+      base: "https://www.gangwana.com",
+      paths,
     }),
   ],
   module: {
