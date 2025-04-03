@@ -5,6 +5,9 @@ on:
     branches:
       - main  # 触发条件：当 main 分支有新的推送时
 
+permissions:
+  contents: write  # 这里手动赋予 GITHUB_TOKEN 写入权限
+  
 jobs:
   build:
     runs-on: ubuntu-latest
